@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primary: #4b6382 ;
+    --secundary: #a4b5c4;
+    --text: #cdd5db;
+    --text-sec: #e3c39d;
+    --hover: #a68868;
+    --dark: #071739;
+}
+
+::selection{
+    background-color: var(--primary);
+    color: var(--text-sec);
+}
+
+.desafiostyle-position{
+    position: fixed;
+    top: 0;
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+    background-color: var(--secundary);
+    border-radius: 8px;
+}
+
+.desafiostyle{
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.desafiostyle:hover{
+    background-color: var(--dark);
+    cursor: pointer;
+    color: var(--hover);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #4b6382;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+@-webkit-keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+.desafio-01 {
+    background-color: var(--dark);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px;
+    margin: 0 auto;
+    border: solid 2px black;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    -webkit-animation: slide-in-bottom 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.desafio-01 strong, .desafio-01 h2{
+  color: var(--hover);
+}
+
+.desafio-01 label{
+    color: var(--secundary);
+    text-transform: uppercase;
+}
+
+
+.desafio-01 span{
+    color: var(--text);
+}
+
+
+
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--text);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+button {
+    background-color:var(--hover);
+    color: var(--text);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    transition: all .2s ease-in-out ;
+    text-transform: uppercase;
+}
+button:hover {
+    background-color: var(--primary);
+}
+.resultado {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid var(--secundary);
+    border-radius: 3px;
+}
+
+.desafio-02{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark);
+    border: solid 1px black;
+    -webkit-animation: slide-in-bottom 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-bottom 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.desafio-02 ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: -40px;
+}
+
+.desafio-02 li{
+    background-color: var(--text-sec);
+    padding: 5px;
+    border: solid 1px black ;
+    color: var(--dark);
+    font-weight: bold;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;   
+    transition: all .2s ease-in-out;
+}
+
+.desafio-02 li:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    opacity: 0.9;
+}
+
+.triangulo{
+    width: 100%;
+    background-color: var(--hover);
+    height: 25rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;    
+}
+#base, #baseR{
+  background-color: var(--dark);
+  color: var(--text);
+  border: solid 1px var(--text-sec);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#altura, #alturaR, #aresta, #diametro{
+    background-color: var(--text-sec);
+    color: var(--dark);
+    border: solid 1px var(--dark);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.triangulo label, .retangulo label, .cubo label , .circulo label{
+    font-size: 21px;
+    text-align: center;
+}
+
+#resultTri, #resultRet, #resultCub, #resultCir{
+    background-color: var(--primary);
+    border: solid 1px var(--dark);
+}
+
+.triangulo p ,.retangulo p, .cubo p, .circulo p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:30%;
+    font-size: 25px;
+}
+
+.retangulo{
+    width: 100%;
+    background-color: var(--hover);
+    height: 25rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.cubo{
+    width: 100%;
+    background-color: var(--hover);
+    height: 25rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.circulo{
+    width: 100%;
+    background-color: var(--hover);
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.desafio-03{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.operacoes button{
+    background-color: var(--dark);
+}
+
+.operacoes button:hover{
+    background-color: var(--hover);
+}
+
+.saldo{
+    text-align: center;
+}
+
+.saldo p{
+font-weight: bold;
+text-transform: uppercase;
+font-size: 25px;
+}
+
+.saldo span{
+color: var(--hover);
+font-size: 30px;
+text-shadow: 2px 5px 5px var(--dark);
+}
